@@ -34,13 +34,16 @@ function App() {
  
   function divide(e) { 
     e.preventDefault();
-    try {
+    if (Number(inputRef.current.value)!=0){
     setResult(result / Number(inputRef.current.value));
     inputRef.current.value="";
-    document.querySelector("input").focus();}
-    catch(error){
-      console.error(error);
+    document.querySelector("input").focus();
+    }else{
+      console.error("Can't devide by zero");
+    
+
     }
+    
     
     // Add the code for the divide function 
     };
